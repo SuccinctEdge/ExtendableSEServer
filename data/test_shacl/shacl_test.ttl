@@ -1,0 +1,391 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ex: <http://example.org/data#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bot: <https://w3c-lbd-cg.github.io/bot#> .
+@prefix sosa: <http://www.w3.org/ns/sosa#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+
+ex:TooMuchCO2Shape
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+  sh:rule [
+      rdf:type sh:TripleRule ;
+      sh:subject sh:this ;
+      sh:predicate ex:has_situation ;
+      sh:object ex:tooMuchCO2 ;
+      sh:condition [
+          sh:property [
+              sh:path bot:hasElement ;
+              sh:property [
+                  sh:path sosa:observes ;
+                  sh:property [
+                      sh:path sosa:hasResult ;
+                      sh:property [
+                          sh:path qudt:numericValue ;
+                          sh:minInclusive 15 ;
+                      ] ;
+                  ] ;
+               ] ;
+          ] ;
+      ] ;
+  ] ;
+.
+
+ex:TooMuchCO2Shape2
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape3
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape4
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape5
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape6
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape7
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape8
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape9
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape10
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape11
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape12
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape13
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape14
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape15
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape16
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape17
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape18
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape19
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .
+
+ex:TooMuchCO2Shape20
+  a sh:shape ;
+  sh:targetClass bot:Zone;
+  sh:property [
+      sh:path bot:hasElement ;
+      sh:property [
+          sh:path sosa:observes ;
+          sh:property [
+              sh:path sosa:hasResult ;
+              sh:property [
+                  sh:path qudt:numericValue ;
+                  sh:maxInclusive 15 ;
+              ] ;
+          ] ;
+       ] ;
+  ] ;
+ .

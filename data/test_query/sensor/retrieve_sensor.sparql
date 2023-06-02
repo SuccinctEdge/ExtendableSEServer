@@ -1,0 +1,7 @@
+SELECT ?Timestamp ?Sensor ?Client WHERE {
+    ?Res <http://qudt.org/schema/qudt#numericValue> "S1Value1" .
+    ?Obs <http://www.w3.org/ns/sosa#hasResult> ?Res .
+    ?Obs <http://qudt.org/schema/qudt#resultTime> ?Timestamp .
+    ?Sensor <http://www.w3.org/ns/sosa#observes> ?Obs .
+    ?Client <http://www.w3.org/ns/sosa#hosts> ?Sensor .
+}

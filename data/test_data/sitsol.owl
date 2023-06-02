@@ -1,0 +1,127 @@
+@prefix : <http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix ns1: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dtype: <http://www.linkedmodel.org/schema/dtype#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@prefix bot: <https://w3c-lbd-cg.github.io/bot#> .
+@prefix sosa: <http://www.w3.org/ns/sosa#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@base <http://www.semanticweb.org/pasyj/ontologies/2022/8/Sitsol> .
+
+<http://www.semanticweb.org/pasyj/ontologies/2022/8/Sitsol> rdf:type owl:Ontology ;
+                                                             owl:imports <http://qudt.org/2.1/schema/qudt> ,
+                                                                         <https://w3id.org/bot-0.3.2> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#has_impact
+:has_impact rdf:type owl:ObjectProperty ;
+            rdfs:domain :Solution ;
+            rdfs:range qudt:AbstractQuantityKind .
+
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#has_negative_impact
+:has_negative_impact rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :has_impact .
+
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#has_positive_impact
+:has_positive_impact rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :has_impact .
+
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#has_situation
+:has_situation rdf:type owl:ObjectProperty ;
+               rdfs:range :Situation .
+
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#has_solution
+:has_solution rdf:type owl:ObjectProperty ;
+              rdfs:domain :Situation ;
+              rdfs:range :Solution .
+
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#unit
+:unit rdf:type owl:ObjectProperty ;
+      rdfs:range qudt:AbstractQuantityKind .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#Office
+:Office rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/bot#Space> .
+
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#Situation
+:Situation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#Solution
+:Solution rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#CO2
+:CO2 rdf:type owl:NamedIndividual ,
+              qudt:QuantityKind .
+
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#OpenWindow
+:OpenWindow rdf:type owl:NamedIndividual ,
+                     :Solution ;
+            :has_negative_impact :CO2 ;
+            :has_positive_impact :Sound ,
+                                 :Temperature .
+
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#Sound
+:Sound rdf:type owl:NamedIndividual ,
+                qudt:QuantityKind .
+
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#Temperature
+:Temperature rdf:type owl:NamedIndividual ,
+                      qudt:QuantityKind .
+
+:node_sensorA rdf:type sosa:Sensor ;
+      sosa:observes :node_observationA .
+
+:node_observationA rdf:type sosa:Observation ;
+      sosa:hasResult :node_resultA .
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#b_475
+:b_475 rdf:type owl:NamedIndividual ,
+                bot:Zone;
+       bot:hasElement :node_sensorA .
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#etage_4
+:etage_4 rdf:type owl:NamedIndividual ,
+                  <https://w3id.org/bot#Storey> ;
+         <https://w3id.org/bot#hasStorey> :etage_4 .
+
+
+###  http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#too_much_co2
+:too_much_co2 rdf:type owl:NamedIndividual ,
+                       :Situation ;
+              :has_solution :OpenWindow .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

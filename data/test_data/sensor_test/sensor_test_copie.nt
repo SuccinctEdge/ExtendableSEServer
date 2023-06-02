@@ -1,0 +1,12 @@
+
+<http://example.org/data/station1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa#Platform> .
+<http://example.org/data/station1> <http://www.w3.org/ns/sosa#hosts> <http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#node_sensorA> .
+<http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#node_sensorA> <http://www.w3.org/ns/sosa#observes> <http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#node_observationA> .
+<http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#node_sensorA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa#Sensor> .
+<http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#node_resultA> <http://qudt.org/schema/qudt#unit> <http://qudt.org/vocab/unit#Mol> .
+<http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#node_observationA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa#Observation> .
+<http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#node_observationA> <http://www.w3.org/ns/sosa#hasResult> <http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#node_resultA> .
+<http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#node_observationA> <http://qudt.org/schema/qudt#resultTime> "Timestamp_1" .
+<http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#node_resultA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa#Result> .
+<http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#b_475> <https://w3c-lbd-cg.github.io/bot#hasElement> <http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#node_sensorA> .
+<http://www.semanticweb.org/pasyj/ontologies/2022/8/untitled-ontology-10#b_475> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3c-lbd-cg.github.io/bot#Zone> .
